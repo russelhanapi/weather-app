@@ -1,2 +1,1 @@
-import "./style.css";
-alert("Ey!")
+import './style.css';
