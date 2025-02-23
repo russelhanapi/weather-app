@@ -8,3 +8,83 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  color: #050708;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  background-color: #0ca678;
+  padding: 2.4rem;
+  border-radius: 3.2rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.input-city {
+  width: 30.2rem;
+  font-size: 2rem;
+  border-radius: 999rem;
+  padding: 1.2rem 1.8rem;
+  border: 8px solid #050708;
+  font-family: inherit;
+  color: inherit;
+}
+
+.card {
+  width: 30.2rem;
+  min-height: 44rem;
+  padding: 3.6rem 2.4rem;
+  border-radius: 3.2rem;
+  border: 8px solid #050708;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-icon {
+  max-height: 12rem;
+  max-width: 90%;
+  margin-bottom: 3.2rem;
+}
+
+.weather-temperature {
+  font-weight: 700;
+  font-size: 9.6rem;
+}
+
+.weather-feels-like {
+  font-size: 1.6rem;
+  padding: 0.8rem 2.2rem;
+  background-color: #20c997;
+  color: #050708;
+  border-radius: 999rem;
+  margin-bottom: 2.4rem;
+}
+
+.weather-condition {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
