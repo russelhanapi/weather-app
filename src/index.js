@@ -3,6 +3,8 @@ import './style.css';
 const apiKey = 'FPWXBUZ5TN987PWUXE6MECV7S';
 
 const inputCityEl = document.querySelector('.input-city');
+const containerWeatherInfoEl = document.querySelector('.weather-info');
+const loaderEl = document.querySelector('.loader');
 const temperatureEl = document.querySelector('.weather-temperature-value');
 const feelsLikeEl = document.querySelector('.weather-feels-like-value');
 const conditionEl = document.querySelector('.weather-condition');
@@ -10,6 +12,7 @@ const iconEl = document.querySelector('.weather-icon');
 
 async function getWeatherData(city) {
   try {
+    toggleLoader(true);
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${apiKey}`,
       { mode: 'cors' }
@@ -23,6 +26,7 @@ async function getWeatherData(city) {
     };
   } catch (error) {
     console.error(error);
+    toggleLoader(false);
   }
 }
 
@@ -44,6 +48,15 @@ function renderWeatherInfo(weatherInfo) {
   feelsLikeEl.textContent = feelsLike;
   conditionEl.textContent = condition;
   iconEl.setAttribute('src', iconSrc);
+
+  iconEl.addEventListener('load', () => {
+    toggleLoader(false);
+  });
 }
 
 getWeatherData('New York').then(renderWeatherInfo);
+
+function toggleLoader(show) {
+  loaderEl.classList.toggle('hidden', !show); // Show loader if show === true
+  containerWeatherInfoEl.classList.toggle('hidden', show); // Hide card if show === true
+}

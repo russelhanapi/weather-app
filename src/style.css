@@ -88,3 +88,27 @@ body {
   font-weight: 600;
   font-size: 2.4rem;
 }
+
+/* NOTE: LOADER */
+.hidden {
+  display: none !important;
+}
+
+.loader {
+  width: 6.4rem;
+  height: 6.4rem;
+  border: 8px solid #ccc;
+  border-top: 8px solid #0ca678;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
