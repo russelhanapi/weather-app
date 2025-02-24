@@ -8,12 +8,20 @@
       content="A simple weather app that provides real-time weather conditions for any city using Visual Crossing's Weather API"
     />
 
+    <!-- Preconnect to optimize font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload Montserrat font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      as="style"
     />
+
+    <!-- Load Montserrat font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" />
+
     <title>Weather App</title>
   </head>
   <body>

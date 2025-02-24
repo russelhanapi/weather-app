@@ -65,6 +65,8 @@ body {
 }
 
 .weather-icon {
+  height: auto;
+  width: auto;
   max-height: 12rem;
   max-width: 90%;
   margin-bottom: 3.2rem;
