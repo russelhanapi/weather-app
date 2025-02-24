@@ -9,7 +9,6 @@ async function init() {
   toggleLoader(true);
   const weatherInfo = await getWeatherData('New York');
   displayWeatherInfo(weatherInfo);
-  toggleLoader(false);
 }
 
 setUpEventListeners();

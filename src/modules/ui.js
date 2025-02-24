@@ -22,6 +22,9 @@ export const displayWeatherInfo = function (weatherInfo) {
 
   // Sets alt text describing the current weather condition
   DOM.iconEl.setAttribute('alt', `Icon representing ${condition} weather condition`);
+
+  // Hide the loader UI once the weather icon finished loading
+  DOM.iconEl.addEventListener('load', () => toggleLoader(false));
 };
 
 export const toggleLoader = function (show) {

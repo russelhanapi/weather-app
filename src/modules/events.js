@@ -11,8 +11,6 @@ export const setUpEventListeners = function () {
       toggleLoader(true);
       const weatherInfo = await getWeatherData(city);
       displayWeatherInfo(weatherInfo);
-      // Hide the loader UI once the weather icon finished loading
-      DOM.iconEl.addEventListener('load', () => toggleLoader(false));
     }
   });
 };
