@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple weather app that provides real-time weather conditions for any city using Visual Crossing's Weather API"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,11 +18,11 @@
   </head>
   <body>
     <div class="container">
-      <input type="text" class="input-city" placeholder="Enter city (e.g. New York)" required />
+      <input type="text" class="input-city" placeholder="Enter city (e.g. New York)" required id="city" name="city" />
       <div class="card">
         <div class="loader"></div>
         <div class="weather-info hidden">
-          <img class="weather-icon" />
+          <img class="weather-icon" alt="Weather icon showing current condition" />
           <p class="weather-temperature"><span class="weather-temperature-value"></span>&deg;</p>
           <p class="weather-feels-like">Feels like <span class="weather-feels-like-value"></span>&deg;</p>
           <p class="weather-condition"></p>

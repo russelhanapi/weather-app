@@ -19,6 +19,9 @@ export const displayWeatherInfo = function (weatherInfo) {
   DOM.feelsLikeEl.textContent = feelsLike;
   DOM.conditionEl.textContent = condition;
   DOM.iconEl.setAttribute('src', iconSrc);
+
+  // Sets alt text describing the current weather condition
+  DOM.iconEl.setAttribute('alt', `Icon representing ${condition} weather condition`);
 };
 
 export const toggleLoader = function (show) {
