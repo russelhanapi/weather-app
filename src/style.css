@@ -42,6 +42,7 @@ body {
   border: 8px solid #050708;
   font-family: inherit;
   color: inherit;
+  text-align: center;
 }
 
 .card {
